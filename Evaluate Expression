@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    float a, x, b, result;
+    scanf("%f %f %f", &a, &x, &b);
+    if((a*x - b) != 0) {
+        result = (a*x) / (a*x - b);
+        printf("Result = %.2f\n", result);
+    } else {
+        printf("Denominator is zero\n");
+    }
+    return 0;
+}
