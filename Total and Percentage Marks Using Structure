@@ -1,0 +1,18 @@
+#include <stdio.h>
+struct Student {
+    int marks[5];
+    int total;
+    float percent;
+};
+int main() {
+    struct Student s;
+    int i;
+    s.total = 0;
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &s.marks[i]);
+        s.total += s.marks[i];
+    }
+    s.percent = s.total / 5.0;
+    printf("Total = %d\nPercentage = %.2f\n", s.total, s.percent);
+    return 0;
+}
