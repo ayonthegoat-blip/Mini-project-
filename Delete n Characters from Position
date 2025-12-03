@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+void del(char str[], int pos, int n) {
+    char temp[100];
+    strncpy(temp, str, pos);
+    temp[pos] = '\0';
+    strcat(temp, str+pos+n);
+    printf("%s\n", temp);
+}
+int main() {
+    char str[100];
+    int pos, n;
+    gets(str);
+    scanf("%d %d", &pos, &n);
+    del(str, pos, n);
+    return 0;
+}
