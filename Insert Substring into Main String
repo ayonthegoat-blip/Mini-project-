@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+void insert(char main[], char sub[], int pos) {
+    char temp[100];
+    strncpy(temp, main, pos);
+    temp[pos] = '\0';
+    strcat(temp, sub);
+    strcat(temp, main+pos);
+    printf("%s\n", temp);
+}
+int main() {
+    char main[100], sub[100];
+    int pos;
+    gets(main);
+    gets(sub);
+    scanf("%d", &pos);
+    insert(main, sub, pos);
+    return 0;
+}
